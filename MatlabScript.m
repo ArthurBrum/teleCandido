@@ -1,4 +1,4 @@
-%% TODO
+%% pseudo-codigo
 % 1) Converter valor binario de caracter ascii para uma onda
 %    (testar dividir em 2 bits: 4 possiveis freq
 %
