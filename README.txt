@@ -42,3 +42,8 @@ https://stackoverflow.com/questions/10357992/how-to-generate-audio-from-a-numpy-
 
 5) Time signal processing (exemplos ainda com pyaudio)
 http://bastibe.de/2012-11-02-real-time-signal-processing-in-python.html
+
+
+https://dsp.stackexchange.com/questions/29946/demodulating-fsk-audio-in-python\
+
+https://stackoverflow.com/questions/35759353/demodulating-an-fsk-signal-in-python

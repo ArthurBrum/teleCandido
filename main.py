@@ -5,6 +5,9 @@ import numpy as np
 
 
 #### Pseudo-codigo
+
+#### TRANSMISSION
+#
 # Ler texto da entrada
 #
 # Pegar caracter por caracter
@@ -14,15 +17,24 @@ import numpy as np
 # Concatenar uma freq diferente no inicio de cada caracter
 #
 
+#### RECEPTION
+#
+# Gravar audio
+# Passar para vetor/waveform
+# Encontrar sincronia
+# Fazer produtos internos (ou filtro casado de outra forma) para avaliar distancia minima
+# Determinar frequencias e converter para conjunto de bits
+
+
 # text = raw_input('Choose a number: ')
 text = 'blabla'
 
-first = 528
-third = (5/4.0)*first
-fifth = (3/2.0)*first
-seventh = (15/8.0)*first
+first = 32.70
+third = 2*(5/4.0)*first
+fifth = 4*(3/2.0)*first
+seventh = 8*(15/8.0)*first
 
-list1 = np.array([first, third, fifth, seventh])
+list1 = np.array([first, third, fifth, seventh, seventh, fifth, first, third])
 
 
 p = pyaudio.PyAudio()
@@ -34,6 +46,9 @@ f = 200.0        # sine frequency, Hz, may be float
 
 # creates a vector for time
 t = np.arange(fs*duration)
+
+# white noise
+noise = np.random.normal(size=t.shape)
 
 for note in list1:
     # generate samples (note conversion to float32 array)
